@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amanchhing.github.io/snake-puzzle-max/sitemap.xml

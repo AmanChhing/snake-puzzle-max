@@ -3,57 +3,117 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snake Puzzle Max</title>
-<meta name="description" content="Tap a snake to set it free. A calm, clever puzzle with a thousand levels that grow with you.">
-<style>
-  :root { --bg: #0b111b; --panel: #152135; --ink: #efe7d4; --soft: #93a2b7; --gold: #f0c267; --line: rgba(228,215,183,.16); }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: radial-gradient(1200px 700px at 50% -10%, #243a63, var(--bg) 70%); color: var(--ink); font: 17px/1.6 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; }
-  main { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
-  header { display: flex; align-items: center; gap: 18px; }
-  header img { width: 84px; height: 84px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
-  h1 { margin: 0; font-size: 34px; letter-spacing: .3px; }
-  h1 small { display: block; font-size: 13px; letter-spacing: 2.5px; color: var(--gold); font-weight: 700; margin-top: 4px; }
-  .hero { margin: 36px 0 28px; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(0,0,0,.5); }
-  .hero img { display: block; width: 100%; height: auto; }
-  p.lead { font-size: 20px; color: var(--ink); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 28px 0; }
-  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
-  .card h3 { margin: 0 0 6px; font-size: 16px; color: var(--gold); }
-  .card p { margin: 0; color: var(--soft); font-size: 15px; }
-  .stores { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
-  .btn { display: inline-block; padding: 12px 20px; border-radius: 999px; border: 1.5px solid var(--gold); color: var(--ink); text-decoration: none; font-weight: 700; }
-  .btn.soon { opacity: .55; border-color: var(--line); }
-  footer { margin-top: 56px; color: var(--soft); font-size: 14px; border-top: 1px solid var(--line); padding-top: 18px; }
-  footer a { color: var(--gold); }
-</style>
+<title>Snake Puzzle Max – Tap a snake to set it free</title>
+<meta name="description" content="A calm, clever puzzle game. Tap a snake and it slithers off the board — if nothing is in its way. A thousand levels that grow with you. By NutanTech Labs.">
+<link rel="canonical" href="https://amanchhing.github.io/snake-puzzle-max/index.html">
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Snake Puzzle Max">
+<meta property="og:title" content="Snake Puzzle Max – Tap a snake to set it free">
+<meta property="og:description" content="A calm, clever puzzle game. Tap a snake and it slithers off the board — if nothing is in its way. A thousand levels that grow with you. By NutanTech Labs.">
+<meta property="og:url" content="https://amanchhing.github.io/snake-puzzle-max/index.html">
+<meta property="og:image" content="https://amanchhing.github.io/snake-puzzle-max/feature.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b111b">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","name":"NutanTech Labs","url":"https://nutantechlabs.com","email":"info@nutantechlabs.com",
+  "address":{"@type":"PostalAddress","streetAddress":"B-128, Bakshi Compound, Bariatu, RIMS Chowk","addressLocality":"Ranchi","addressRegion":"Jharkhand","postalCode":"834009","addressCountry":"IN"}},
+ {"@type":"MobileApplication","name":"Snake Puzzle Max","operatingSystem":"Android, iOS","applicationCategory":"GameApplication",
+  "description":"Tap a snake to set it free. A calm, clever puzzle with over a thousand levels that grow with you.",
+  "image":"https://amanchhing.github.io/snake-puzzle-max/feature.png","url":"https://amanchhing.github.io/snake-puzzle-max/",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "publisher":{"@type":"Organization","name":"NutanTech Labs","url":"https://nutantechlabs.com"}}
+]}
+</script>
 </head>
 <body>
-<main>
-  <header>
-    <img src="icon.png" alt="Snake Puzzle Max icon">
-    <h1>Snake Puzzle Max <small>TAP A SNAKE TO SET IT FREE</small></h1>
-  </header>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><img src="icon.png" alt=""> Snake Puzzle Max</a>
+  <nav><a href="index.html" aria-current="page">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></nav>
+</div></header>
 
-  <div class="hero"><img src="feature.png" alt="Four snakes coiled into an S"></div>
+<section class="hero" style="border-top:0"><div class="wrap">
+  <div>
+    <h1><small>FREE PUZZLE GAME · ANDROID &amp; iOS</small>Snake Puzzle Max</h1>
+    <p class="lead">Every snake wants out. Tap one and it slithers off the board — but only if nothing is in front of its head. Find the order, clear the board, and the next one is a little bigger.</p>
+    <div class="stores">
+      <a class="btn primary soon" href="#" title="Coming soon">▶ Google Play — coming soon</a>
+      <a class="btn soon" href="#" title="Coming soon"> App Store — coming soon</a>
+    </div>
+    <p class="by">Made by <a href="https://nutantechlabs.com" target="_blank" rel="noopener">NutanTech Labs</a>, Ranchi, India.</p>
+  </div>
+  <div class="art"><img src="feature.png" alt="Four coloured snakes coiled into the shape of an S"></div>
+</div></section>
 
-  <p class="lead">Every snake wants out. Tap one and it slithers off the board — but only if nothing is in front of its head. Clear the board, and the next one is a little bigger, a little tighter.</p>
-
+<section id="features"><div class="wrap">
+  <h2>Simple rule, deep puzzle</h2>
+  <p class="sub">One tap per snake. The whole game is working out which one can go first.</p>
   <div class="grid">
-    <div class="card"><h3>Grows with you</h3><p>Ten snakes on level one. Six hundred by level a thousand. Pinch to zoom, drag to look around, a minimap keeps you oriented.</p></div>
-    <div class="card"><h3>Never a dead end</h3><p>Every board is built so it can always be cleared. If you get stuck, it's the order, not the puzzle.</p></div>
-    <div class="card"><h3>Day and night</h3><p>Six places to play in — cave, jungle, temple, dunes, river, peaks — each in a day and a night look.</p></div>
-    <div class="card"><h3>Race the clock</h3><p>Best times per level, a leaderboard for each one, and an overall ranking.</p></div>
+    <div class="card"><h3>Grows with you</h3><p>Ten snakes on level one. Hundreds by level five hundred. Every level is a little bigger and a little tighter than the last — there are over a thousand.</p></div>
+    <div class="card"><h3>Never a dead end</h3><p>Every board is built so it can always be cleared. If you are stuck, it is the order, not the puzzle.</p></div>
+    <div class="card"><h3>Big boards, no squinting</h3><p>Pinch to zoom, drag to look around, and a minimap in the corner keeps you oriented on the largest boards.</p></div>
+    <div class="card"><h3>Three lives, three hints</h3><p>A wrong tap costs a life. Hints point you to a snake that can go. Both can be topped up by watching a short ad.</p></div>
+    <div class="card"><h3>Day and night</h3><p>Six places to play in — cave, jungle, temple, dunes, river, peaks — each with a day and a night look. Follows your phone, or pick one.</p></div>
+    <div class="card"><h3>Race the clock</h3><p>Best times per level, a leaderboard for every level and an overall ranking. Play under any nickname — no account needed.</p></div>
   </div>
+</div></section>
 
-  <div class="stores">
-    <a class="btn soon" href="#">Google Play — coming soon</a>
-    <a class="btn soon" href="#">App Store — coming soon</a>
+<section id="screens"><div class="wrap">
+  <h2>On the board</h2>
+  <p class="sub">From the first ten snakes to a board of six hundred.</p>
+  <div class="shots">
+    <figure><img src="shots/level-1.png" alt="Level 1 with ten snakes"><figcaption>Level 1 — learn the rule</figcaption></figure>
+    <figure><img src="shots/level-27-day.png" alt="Level 27 in day mode"><figcaption>Level 27 — day mode</figcaption></figure>
+    <figure><img src="shots/level-500-zoomed.png" alt="Level 500 zoomed in with minimap"><figcaption>Level 500 — zoomed in</figcaption></figure>
+    <figure><img src="shots/level-1000.png" alt="Level 1000 whole board"><figcaption>Level 1000 — 600 snakes</figcaption></figure>
   </div>
+</div></section>
 
-  <footer>
-    <a href="privacy.html">Privacy policy</a> · Contact: <a href="mailto:iamamanching@gmail.com">iamamanching@gmail.com</a>
-  </footer>
-</main>
+<section id="how"><div class="wrap">
+  <h2>How to play</h2>
+  <p class="sub">Thirty seconds to learn.</p>
+  <ol class="steps">
+    <li><strong>Look at the heads.</strong> Every snake points somewhere. A snake can leave only if the straight line in front of its head is clear all the way off the board.</li>
+    <li><strong>Tap a snake that can go.</strong> It slithers away along its own body. The space it leaves may free the next one.</li>
+    <li><strong>Mind your lives.</strong> Tap a blocked snake and it bumps into whatever is in front of it — that costs one of three lives.</li>
+    <li><strong>Clear the board.</strong> When the last snake is gone, the level is done and your time is recorded. On to the next.</li>
+  </ol>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2>
+  <p class="sub">Short answers. More on the <a href="support.html">support page</a>.</p>
+  <details><summary>Is it free?</summary><p>Yes. The game is free and supported by ads. Ads appear between some levels, and you can choose to watch one to get a life back, a hint, or to skip to a level you have not reached.</p></details>
+  <details><summary>Do I need an account?</summary><p>No. Your progress is saved on your phone. The leaderboard uses a nickname you pick and an anonymous ID — no email, no password.</p></details>
+  <details><summary>I ran out of lives. Did I lose my progress?</summary><p>No. You can watch an ad for one more life and continue the same board, or restart the level. Levels you have cleared stay cleared.</p></details>
+  <details><summary>How do I zoom?</summary><p>Pinch with two fingers, or tap the zoom button in the corner of the board. When zoomed in, a small map appears at the top right — tap it to jump to any part of the board.</p></details>
+  <details><summary>Can I replay a level?</summary><p>Yes. Tap the level number at the top to open the level map. Cleared levels show your best time; tap one to play it again.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+  <div>
+    <h4>Snake Puzzle Max</h4>
+    <p style="margin:0 0 10px">A product of <a class="ntl" href="https://nutantechlabs.com" target="_blank" rel="noopener">NutanTech Labs</a>, a digital product engineering and applied AI company. <em>We build useful software for the real world.</em></p>
+    <p style="margin:0">B-128, Bakshi Compound, Bariatu, RIMS Chowk,<br>Ranchi, Jharkhand 834009, India</p>
+  </div>
+  <div>
+    <h4>Game</h4>
+    <a href="index.html#features">Features</a>
+    <a href="index.html#how">How to play</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="support.html">Support</a>
+  </div>
+  <div>
+    <h4>Company &amp; legal</h4>
+    <a href="https://nutantechlabs.com" target="_blank" rel="noopener">nutantechlabs.com</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms of service</a>
+  </div>
+  <div class="legal">© 2026 NutanTech Labs. All rights reserved. Google Play and the Google Play logo are trademarks of Google LLC. App Store is a trademark of Apple Inc.</div>
+</div></footer>
 </body>
 </html>
