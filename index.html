@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snake Puzzle Max</title>
+<meta name="description" content="Tap a snake to set it free. A calm, clever puzzle with a thousand levels that grow with you.">
+<style>
+  :root { --bg: #0b111b; --panel: #152135; --ink: #efe7d4; --soft: #93a2b7; --gold: #f0c267; --line: rgba(228,215,183,.16); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: radial-gradient(1200px 700px at 50% -10%, #243a63, var(--bg) 70%); color: var(--ink); font: 17px/1.6 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { display: flex; align-items: center; gap: 18px; }
+  header img { width: 84px; height: 84px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+  h1 { margin: 0; font-size: 34px; letter-spacing: .3px; }
+  h1 small { display: block; font-size: 13px; letter-spacing: 2.5px; color: var(--gold); font-weight: 700; margin-top: 4px; }
+  .hero { margin: 36px 0 28px; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+  .hero img { display: block; width: 100%; height: auto; }
+  p.lead { font-size: 20px; color: var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 28px 0; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 16px; color: var(--gold); }
+  .card p { margin: 0; color: var(--soft); font-size: 15px; }
+  .stores { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 999px; border: 1.5px solid var(--gold); color: var(--ink); text-decoration: none; font-weight: 700; }
+  .btn.soon { opacity: .55; border-color: var(--line); }
+  footer { margin-top: 56px; color: var(--soft); font-size: 14px; border-top: 1px solid var(--line); padding-top: 18px; }
+  footer a { color: var(--gold); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="Snake Puzzle Max icon">
+    <h1>Snake Puzzle Max <small>TAP A SNAKE TO SET IT FREE</small></h1>
+  </header>
+
+  <div class="hero"><img src="feature.png" alt="Four snakes coiled into an S"></div>
+
+  <p class="lead">Every snake wants out. Tap one and it slithers off the board — but only if nothing is in front of its head. Clear the board, and the next one is a little bigger, a little tighter.</p>
+
+  <div class="grid">
+    <div class="card"><h3>Grows with you</h3><p>Ten snakes on level one. Six hundred by level a thousand. Pinch to zoom, drag to look around, a minimap keeps you oriented.</p></div>
+    <div class="card"><h3>Never a dead end</h3><p>Every board is built so it can always be cleared. If you get stuck, it's the order, not the puzzle.</p></div>
+    <div class="card"><h3>Day and night</h3><p>Six places to play in — cave, jungle, temple, dunes, river, peaks — each in a day and a night look.</p></div>
+    <div class="card"><h3>Race the clock</h3><p>Best times per level, a leaderboard for each one, and an overall ranking.</p></div>
+  </div>
+
+  <div class="stores">
+    <a class="btn soon" href="#">Google Play — coming soon</a>
+    <a class="btn soon" href="#">App Store — coming soon</a>
+  </div>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a> · Contact: <a href="mailto:iamamanching@gmail.com">iamamanching@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
