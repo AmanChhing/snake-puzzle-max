@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beat my time – Snake Puzzle Max</title>
+<meta name="description" content="A friend challenged you to a level of Snake Puzzle Max. Open the app and beat their time.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../icon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Snake Puzzle Max">
+<meta property="og:title" content="Beat my time – Snake Puzzle Max">
+<meta property="og:description" content="A friend challenged you to a level of Snake Puzzle Max. Open the app and beat their time.">
+<meta property="og:image" content="https://amanchhing.github.io/snake-puzzle-max/feature.png">
+<meta name="theme-color" content="#0b111b">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .challenge { min-height: calc(100vh - 60px); display: grid; place-items: center; text-align: center; padding: 40px 0; }
+  .challenge h1 { font-size: 40px; line-height: 1.1; margin: 0 0 6px; }
+  .challenge h1 small { display: block; font-size: 13px; letter-spacing: 3px; color: var(--gold); font-weight: 800; margin-bottom: 12px; }
+  .challenge .time { font-size: 64px; font-weight: 800; color: var(--gold); margin: 10px 0 4px; letter-spacing: 1px; }
+  .challenge p.lead { color: var(--soft); font-size: 18px; margin: 0 0 26px; }
+  .challenge .stores { justify-content: center; }
+  .challenge .note { margin-top: 22px; font-size: 13.5px; color: var(--soft); }
+  .challenge .note a { color: var(--ink); }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="../index.html"><img src="../icon.png" alt=""> Snake Puzzle Max</a>
+</div></header>
+
+<section class="challenge"><div class="wrap">
+  <div>
+    <h1><small>A FRIEND DARES YOU</small>Beat my time on <span id="level">this level</span></h1>
+    <div class="time" id="time" hidden></div>
+    <p class="lead">Tap a snake to set it free. Clear the board faster than they did.</p>
+    <div class="stores">
+      <a class="btn primary" id="open" href="#">Open in the app</a>
+      <a class="btn" id="store" href="https://play.google.com/store/apps/details?id=com.nutantechlabs.snakepuzzlemax">Get it on Google Play</a>
+    </div>
+    <p class="note">Already installed? Use <b>Open in the app</b>. Otherwise install it, then open this link again.</p>
+  </div>
+</div></section>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var level = parseInt(q.get('level'), 10);
+  var t = parseInt(q.get('t'), 10);
+  if (level > 0) document.getElementById('level').textContent = 'level ' + level;
+  if (t >= 0) {
+    var el = document.getElementById('time');
+    el.textContent = Math.floor(t / 60) + ':' + ('0' + (t % 60)).slice(-2);
+    el.hidden = false;
+  }
+  var store = 'https://play.google.com/store/apps/details?id=com.nutantechlabs.snakepuzzlemax';
+  var pkg = 'com.nutantechlabs.snakepuzzlemax';
+  // Android: ask the system to hand this very URL to the app, and fall back
+  // to the store when it is not installed. Elsewhere the button is the store.
+  var open = document.getElementById('open');
+  if (/android/i.test(navigator.userAgent)) {
+    open.href = 'intent://' + location.host + location.pathname + location.search +
+      '#Intent;scheme=https;package=' + pkg +
+      ';S.browser_fallback_url=' + encodeURIComponent(store) + ';end';
+  } else {
+    open.href = store;
+  }
+})();
+</script>
+</body>
+</html>
